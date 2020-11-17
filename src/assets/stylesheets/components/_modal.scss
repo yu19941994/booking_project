@@ -1,0 +1,134 @@
+.modal{
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  // position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 300;
+  top: 0;
+  left: 0;
+  // display: none;
+  &-content{
+    margin: 84px 128px;
+    border-radius: 0;
+    border: 1px solid $primary;
+    position: absolute;
+    @include uidesign (){
+      margin: 84px 0;
+    }
+    @include pad (){
+      width: 70%;
+    }
+    .close{
+      position: absolute;
+      right: 38px;
+      top: 38px;
+      color: $primary;
+      z-index: 500;
+      @include pad (){
+        color: $light;
+      }
+    }
+  }
+  &-body{
+    padding: 0;
+    display: flex;
+    @include pad (){
+      flex-direction: column;
+    }
+  }
+  &-outSide{
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    // margin: 84px 128px;
+  }
+  &-judge{
+    display: flex;
+    align-items: center;
+    margin: 84px 128px;
+    border-radius: 0;
+    border: 1px solid $primary;
+    background-color: $primary;
+    color: $light;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 125px 0;
+    position: relative;
+    .close-judge{
+      position: absolute;
+      top: 38px;
+      right: 38px;
+    }
+  }
+  // &-judgeBody{
+  //   position: relative;
+  //   .close-judge{
+  //     position: absolute;
+  //     top: -100;
+  //     right: 0;
+  //   }
+  // }
+  &-overlay{
+    z-index: 400;
+    // width: 600px;
+    // height: 300px;
+    // background-color: $light;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+  &-detail{
+    padding: 51px 94px 25px 30px;
+    position: relative;
+    @include pc () {
+      padding: 10px;
+    }
+    @include pad (){
+      display: none;
+    }
+    .close{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+  }
+}
+.process{
+  &-inside{
+    display: flex;
+  }
+  &-detail{
+    padding: 5px 65px;
+    background-color: $secondary;
+  }
+  &-icon{
+    height: 32px;
+    width: 32px;
+    margin: 3px auto;
+  }
+  &-text{
+    text-align: center;
+    border: 1px solid $secondary;
+    height: 86px;
+    border-radius: 0px 0px 10px 10px;
+  }
+  .arrow{
+    margin: 0 16px;
+  }
+}
+.slide-fade-enter-active {
+  transition: all .3s;
+}
+.slide-fade-leave-active {
+  transition: all .3s;
+}
+.slide-fade-enter{
+  transform: translateY(-30px);
+  opacity: 0;
+}
+.slide-fade-leave-to{
+  transform: translateY(30px);
+  opacity: 0;
+}

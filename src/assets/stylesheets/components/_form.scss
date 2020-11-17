@@ -1,0 +1,42 @@
+.name, .phone, .checkIn, .checkOut{
+  display: flex;
+  flex-direction: column;
+  color: $light;
+  font-size: $h7;
+  margin: 14px auto;
+}
+
+.noPay{
+  text-align: center;
+}
+
+.modal-form{
+  padding: 51px 65px 26px 65px;
+  height: 100%;
+  background-color: $primary;
+  margin: 0;
+  @include pc () {
+      padding: 10px;
+  }
+   @include pad () {
+      width: 100%;
+  }
+  label{
+    padding-bottom: 7px;
+    @include pad () {
+      margin-top: 14px;
+    }
+  }
+  input{
+    height: 36px;
+    padding: 0;
+    border-radius: 8px;
+    width: 100%;
+    @include pad () {
+      width: 90%;
+    }
+  }
+  .btn-lg{
+    margin-bottom: 18px;
+  }
+}
