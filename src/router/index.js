@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import RoomIntroduce from '../views/RoomIntroduce.vue'
+import New from '../views/New.vue'
 // import VCalendar from 'v-calendar'
 
 Vue.use(VueRouter)
@@ -17,6 +18,11 @@ const routes = [
     path: '/roomintroduce/:id',
     name: 'RoomIntroduce',
     component: RoomIntroduce
+  },
+  {
+    path: '/new',
+    name: 'New',
+    component: New
   }
 ]
 
